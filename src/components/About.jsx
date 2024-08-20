@@ -1,6 +1,6 @@
 import { ABOUT_ITEMS } from "../constants";
 import { motion } from "framer-motion";
-import AnimatedBackground from "./core/animated-background";
+import AnimatedBackground from "./animated-background";
 
 const About = () => {
   return (
