@@ -1,35 +1,47 @@
-import aboutImage from "../assets/about.jpg";
-import { ABOUT_TEXT } from "../constants";
+import { ABOUT_ITEMS } from "../constants";
 import { motion } from "framer-motion";
+import AnimatedBackground from "./core/animated-background";
 
 const About = () => {
   return (
-    <div className="border-b border-neutral-900 pb-4">
-      <h1 className="my-20 text-center text-4xl">
-        About <span className="text-neutral-500"> Me</span>
-      </h1>
-      <div className="flex flex-wrap">
-        <motion.div
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.5 }}
-          className="w-full lg:w-1/2 lg:p-8"
+    <div className="pb-4">
+      <motion.h1
+        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, x: -100 }}
+        transition={{ duration: 1.5 }}
+        className="mt-10 text-center text-4xl max-[640px]:text-2xl"
+      >
+        About <span className="text-accent"> Me</span>
+      </motion.h1>
+      <motion.div
+        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, x: -100 }}
+        transition={{ duration: 1.5 }}
+        className="grid grid-cols-1 p-10 md:grid-cols-3"
+      >
+        <AnimatedBackground
+          className="rounded-lg bg-gray-800"
+          transition={{
+            type: "spring",
+            bounce: 0.2,
+            duration: 0.6,
+          }}
+          enableHover
         >
-          <div className="flex items-center justify-center">
-            <img className="rounded-2xl" src={aboutImage} alt="about" />
-          </div>
-        </motion.div>
-        <motion.div
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: 100 }}
-          transition={{ duration: 0.5 }}
-          className="w-full lg:w-1/2"
-        >
-          <div className="flex justify-center lg:justify-start">
-            <p className="my-2 max-w-xl py-6">{ABOUT_TEXT}</p>
-          </div>
-        </motion.div>
-      </div>
+          {ABOUT_ITEMS.map((item, index) => (
+            <div key={index} data-id={`card-${index}`}>
+              <div className="flex select-none flex-col space-y-1 p-7">
+                <h3 className="text-xl font-semibold text-accent max-[640px]:text-center max-[640px]:mb-2 ">
+                  {item.title}
+                </h3>
+                <p className="text-base text-white max-[640px]:text-center max-[640px]:text-sm">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </AnimatedBackground>
+      </motion.div>
     </div>
   );
 };

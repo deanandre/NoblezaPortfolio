@@ -1,5 +1,5 @@
 import { HERO_CONTENT } from "../constants";
-import profilePicture from "../assets/kevinRushProfile.png";
+import profilePicture from "../assets/deanNoblezaProfile.png";
 import { motion } from "framer-motion";
 
 const container = (delay) => ({
@@ -13,46 +13,114 @@ const container = (delay) => ({
 
 const Hero = () => {
   return (
-    <div className="border-b border-neutral-900 pb-4 lg:mb-35">
-      <div className="flex flex-wrap">
+    <div className="pb-4 lg:mb-35">
+      <div className="flex flex-wrap items-center max-[1030px]:flex-col-reverse">
+        {/* Hero Contents */}
         <div className="w-full lg:w-1/2">
           <div className="flex flex-col items-center lg:items-start">
             <motion.h1
               variants={container(0)}
               initial="hidden"
               animate="visible"
-              className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl"
+              className="pb-3 text-base font-semibold tracking-tight lg:mt-1 lg:text-xl max-[640px]:pb-0"
             >
-              Dean Nobleza
+              Front-End Developer
             </motion.h1>
             <motion.span
               variants={container(0.5)}
               initial="hidden"
               animate="visible"
-              className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-3xl tracking-tight text-transparent"
+              className=" font-bold text-4xl tracking-tight xl:text-8xl max-[1030px]:text-center"
             >
-              Front End Developer
+              Hello I'm <br />
+              <span className="text-accent"> Dean Nobleza</span>
             </motion.span>
             <motion.p
               variants={container(1)}
               initial="hidden"
               animate="visible"
-              className="my-2 max-w-xl py-6 font-light tracking-tighter"
+              className="my-2 max-w-xl py-6 font-light tracking-widest max-[1030px]:text-center max-[640px]:text-xs max-[640px]:py-2"
             >
               {HERO_CONTENT}
             </motion.p>
+            <motion.a
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+              variants={container(1)}
+              initial="hidden"
+              animate="visible"
+              className="border border-accent text-accent rounded-full py-2 px-8 transition-colors duration-300 hover:bg-accent hover:text-white max-[640px]:px-6 max-[640px]:text-sm"
+            >
+              View Resume
+            </motion.a>
           </div>
         </div>
-        <div className="w-full lg:w-1/2 lg:p-8">
-          <div className="flex justify-center">
-            <motion.img
-              initial={{ x: 100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1, delay: 1.2 }}
-              src={profilePicture}
-              alt="Profile Picture"
-            />
-          </div>
+
+        {/* Profile Picture */}
+        <div className="flex w-full justify-center lg:w-1/2">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              transition: {
+                delay: 0.5,
+                duration: 0.4,
+                ease: "easeIn",
+              },
+            }}
+            className="flex justify-center"
+          >
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: 1,
+                transition: {
+                  delay: 0.5,
+                  duration: 0.5,
+                  ease: "easeInOut",
+                },
+              }}
+              className="mt-10 w-[160px] xl:w-[330px] mix-blend-lighten absolute max-[640px]:mt-3"
+            >
+              <img
+                src={profilePicture}
+                alt="Profile Picture"
+                className="object-contain"
+              />
+            </motion.div>
+
+            <motion.svg
+              className="w-[230px] lg:w-[306px] xl:w-[506px] mb-10"
+              fill="none"
+              viewBox="0 0 506 506"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <motion.circle
+                cx="253"
+                cy="253"
+                r="250"
+                stroke="#00ff99"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                initial={{ strokeDasharray: "24 10 0 0" }}
+                animate={{
+                  strokeDasharray: [
+                    "15 120 25 25",
+                    "16 25 92 72",
+                    "4 250 22 22",
+                  ],
+                  rotate: [120, 360],
+                }}
+                transition={{
+                  duration: 20,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                }}
+              />
+            </motion.svg>
+          </motion.div>
         </div>
       </div>
     </div>
