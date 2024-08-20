@@ -1,5 +1,9 @@
 import { RiTailwindCssFill } from "react-icons/ri";
 import { motion } from "framer-motion";
+import LogoHTML from "../assets/html-5.png";
+import LogoCSS from "../assets/css-3.png";
+import LogoJS from "../assets/js.png";
+import LogoReact from "../assets/react.png";
 
 const iconVariants = (duration) => ({
   initial: { y: -10 },
@@ -37,7 +41,7 @@ const Technologies = () => {
           animate="animate"
           className="bg-gray-200 rounded-2xl border-4 border-neutral-800 p-4"
         >
-          <img src="src/assets/html-5.png" alt="HTML Logo" width={80} />
+          <img src={LogoHTML} alt="HTML Logo" width={80} />
         </motion.div>
         <motion.div
           variants={iconVariants(3)}
@@ -45,7 +49,7 @@ const Technologies = () => {
           animate="animate"
           className="bg-gray-200 rounded-2xl border-4 border-neutral-800 p-4"
         >
-          <img src="src/assets/css-3.png" alt="CSS Logo" width={80} />
+          <img src={LogoCSS} alt="CSS Logo" width={80} />
         </motion.div>
         <motion.div
           variants={iconVariants(5)}
@@ -53,12 +57,7 @@ const Technologies = () => {
           animate="animate"
           className="bg-gray-200 rounded-2xl border-4 border-neutral-800 p-4"
         >
-          <img
-            src="src/assets/js.png"
-            alt="JS Logo"
-            width={80}
-            className="p-3"
-          />
+          <img src={LogoJS} alt="JS Logo" width={80} className="p-3" />
         </motion.div>
         <motion.div
           variants={iconVariants(2)}
@@ -66,12 +65,7 @@ const Technologies = () => {
           animate="animate"
           className="bg-gray-200 rounded-2xl border-4 border-neutral-800 p-4"
         >
-          <img
-            src="src/assets/react.png"
-            alt="React JS Logo"
-            width={80}
-            className="p-2"
-          />
+          <img src={LogoReact} alt="React JS Logo" width={80} className="p-2" />
         </motion.div>
         <motion.div
           variants={iconVariants(6)}
