@@ -1,9 +1,5 @@
-import { FaHtml5 } from "react-icons/fa";
-import { IoLogoCss3 } from "react-icons/io";
-import { RiJavascriptFill } from "react-icons/ri";
-import { RiReactjsLine } from "react-icons/ri";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { animate, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const iconVariants = (duration) => ({
   initial: { y: -10 },
@@ -27,7 +23,7 @@ const Technologies = () => {
         transition={{ duration: 1.5 }}
         className="my-20 text-center text-4xl"
       >
-        Technologies
+        Tech Stack
       </motion.h1>
       <motion.div
         whileInView={{ opacity: 1, x: 0 }}
@@ -39,41 +35,51 @@ const Technologies = () => {
           variants={iconVariants(2.5)}
           initial="initial"
           animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
+          className="bg-gray-200 rounded-2xl border-4 border-neutral-800 p-4"
         >
-          <FaHtml5 className="text-7xl text-orange-400" />
+          <img src="src/assets/html-5.png" alt="HTML Logo" width={80} />
         </motion.div>
         <motion.div
           variants={iconVariants(3)}
           initial="initial"
           animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
+          className="bg-gray-200 rounded-2xl border-4 border-neutral-800 p-4"
         >
-          <IoLogoCss3 className="text-7xl text-blue-600" />
+          <img src="src/assets/css-3.png" alt="CSS Logo" width={80} />
         </motion.div>
         <motion.div
           variants={iconVariants(5)}
           initial="initial"
           animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
+          className="bg-gray-200 rounded-2xl border-4 border-neutral-800 p-4"
         >
-          <RiJavascriptFill className="text-7xl text-yellow-400" />
+          <img
+            src="src/assets/js.png"
+            alt="JS Logo"
+            width={80}
+            className="p-3"
+          />
         </motion.div>
         <motion.div
           variants={iconVariants(2)}
           initial="initial"
           animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
+          className="bg-gray-200 rounded-2xl border-4 border-neutral-800 p-4"
         >
-          <RiReactjsLine className="text-7xl text-cyan-400" />
+          <img
+            src="src/assets/react.png"
+            alt="React JS Logo"
+            width={80}
+            className="p-2"
+          />
         </motion.div>
         <motion.div
           variants={iconVariants(6)}
           initial="initial"
           animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
+          className="bg-gray-200 rounded-2xl border-4 border-neutral-800 p-4"
         >
-          <RiTailwindCssFill className="text-7xl text-sky-400" />
+          <RiTailwindCssFill className="text-7xl p-2 text-sky-400" />
         </motion.div>
       </motion.div>
     </div>

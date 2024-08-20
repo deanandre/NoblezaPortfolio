@@ -21,7 +21,7 @@ const Experience = () => {
               transition={{ duration: 1 }}
               className="w-full lg:w-1/4"
             >
-              <p>{experience.year}</p>
+              <p>{experience.date}</p>
             </motion.div>
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
