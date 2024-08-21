@@ -18,7 +18,7 @@ const projects = [
     title: "Architectural Blog Website",
     description: "This is our prelim project on our Web Technologies subject",
     stack: [{ name: "HTML 5" }, { name: "CSS 3" }, { name: "JavaScript" }],
-    image: { envisionProject },
+    image: envisionProject,
     live: "https://deanandre.github.io/envision-estetech/",
     github: "https://github.com/deanandre/envision-estetech",
   },
@@ -28,7 +28,7 @@ const projects = [
     description:
       "LoreradaSdasdvfasdyuafsvduygvasudyvasuydigv asd asuhsav dsauid vasuidv asui",
     stack: [{ name: "HTML 5" }, { name: "CSS 3" }, { name: "JavaScript" }],
-    image: { envisionProject },
+    image: envisionProject,
     live: "",
     github: "",
   },
@@ -38,7 +38,7 @@ const projects = [
     description:
       "LoreradaSdasdvfasdyuafsvduygvasudyvasuydigv asd asuhsav dsauid vasuidv asui",
     stack: [{ name: "HTML 5" }, { name: "CSS 3" }, { name: "JavaScript" }],
-    image: { envisionProject },
+    image: envisionProject,
     live: "",
     github: "",
   },
