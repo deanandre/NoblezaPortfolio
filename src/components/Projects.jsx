@@ -10,17 +10,17 @@ import {
   TooltipTrigger,
 } from "./tooltip";
 import ProjectSliderButtons from "./ProjectSliderButtons";
+import envisionProject from "../assets/envision.png";
 
 const projects = [
   {
     num: "01",
     title: "Architectural Blog Website",
-    description:
-      "LoreradaSdasdvfasdyu afsvduygvasudyvasuydigv asd asuhsav dsauid vasuidv asui",
+    description: "This is our prelim project on our Web Technologies subject",
     stack: [{ name: "HTML 5" }, { name: "CSS 3" }, { name: "JavaScript" }],
-    image: "/src/assets/envision.png",
-    live: "",
-    github: "",
+    image: { envisionProject },
+    live: "https://deanandre.github.io/envision-estetech/",
+    github: "https://github.com/deanandre/envision-estetech",
   },
   {
     num: "02",
@@ -28,7 +28,7 @@ const projects = [
     description:
       "LoreradaSdasdvfasdyuafsvduygvasudyvasuydigv asd asuhsav dsauid vasuidv asui",
     stack: [{ name: "HTML 5" }, { name: "CSS 3" }, { name: "JavaScript" }],
-    image: "/src/assets/html-5.png",
+    image: { envisionProject },
     live: "",
     github: "",
   },
@@ -38,7 +38,7 @@ const projects = [
     description:
       "LoreradaSdasdvfasdyuafsvduygvasudyvasuydigv asd asuhsav dsauid vasuidv asui",
     stack: [{ name: "HTML 5" }, { name: "CSS 3" }, { name: "JavaScript" }],
-    image: "/src/assets/html-5.png",
+    image: { envisionProject },
     live: "",
     github: "",
   },
