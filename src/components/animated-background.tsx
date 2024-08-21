@@ -1,4 +1,4 @@
-'use client';
+
 import { cn } from '../lib/utils';
 import { AnimatePresence, Transition, motion } from 'framer-motion';
 import React from 'react';

@@ -8,3 +8,11 @@
   font-family: "JetBrains Mono", monospace;
   @apply bg-primary
 }
+
+@layer utilities {
+  .text-outline {
+    color: transparent; /* Makes the text fill transparent */
+    -webkit-text-stroke: 2px white; /* Outlines the text with a 2px black stroke */
+    text-stroke: 2px white; /* Fallback for non-webkit browsers */
+  }
+}

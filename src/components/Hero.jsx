@@ -13,8 +13,8 @@ const container = (delay) => ({
 
 const Hero = () => {
   return (
-    <div className="pb-4 lg:mb-35">
-      <div className="flex flex-wrap items-center max-[1030px]:flex-col-reverse">
+    <div className="pb-40 lg:mb-35 max-[640px]:pb-0">
+      <div className="flex flex-wrap items-center max-[1030px]:flex-col-reverse border-b border-neutral-500 pb-20">
         {/* Hero Contents */}
         <div className="w-full lg:w-1/2">
           <div className="flex flex-col items-center lg:items-start">

@@ -20,12 +20,12 @@ const iconVariants = (duration) => ({
 
 const Technologies = () => {
   return (
-    <div className="pb-24">
+    <div className="pb-24 max-[640px]:pb-0">
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 1.5 }}
-        className="my-20 text-center text-4xl"
+        className="mb-20 text-center text-4xl max-[640px]:mb-10"
       >
         Tech Stack
       </motion.h1>
@@ -39,7 +39,7 @@ const Technologies = () => {
           variants={iconVariants(2.5)}
           initial="initial"
           animate="animate"
-          className="bg-gray-200 rounded-2xl border-4 border-neutral-800 p-4"
+          className="bg-gray-200 rounded-2xl border-4 border-accent p-4"
         >
           <img src={LogoHTML} alt="HTML Logo" width={80} />
         </motion.div>
@@ -47,7 +47,7 @@ const Technologies = () => {
           variants={iconVariants(3)}
           initial="initial"
           animate="animate"
-          className="bg-gray-200 rounded-2xl border-4 border-neutral-800 p-4"
+          className="bg-gray-200 rounded-2xl border-4 border-accent p-4"
         >
           <img src={LogoCSS} alt="CSS Logo" width={80} />
         </motion.div>
@@ -55,7 +55,7 @@ const Technologies = () => {
           variants={iconVariants(5)}
           initial="initial"
           animate="animate"
-          className="bg-gray-200 rounded-2xl border-4 border-neutral-800 p-4"
+          className="bg-gray-200 rounded-2xl border-4 border-accent p-4"
         >
           <img src={LogoJS} alt="JS Logo" width={80} className="p-3" />
         </motion.div>
@@ -63,7 +63,7 @@ const Technologies = () => {
           variants={iconVariants(2)}
           initial="initial"
           animate="animate"
-          className="bg-gray-200 rounded-2xl border-4 border-neutral-800 p-4"
+          className="bg-gray-200 rounded-2xl border-4 border-accent p-4"
         >
           <img src={LogoReact} alt="React JS Logo" width={80} className="p-2" />
         </motion.div>
@@ -71,7 +71,7 @@ const Technologies = () => {
           variants={iconVariants(6)}
           initial="initial"
           animate="animate"
-          className="bg-gray-200 rounded-2xl border-4 border-neutral-800 p-4"
+          className="bg-gray-200 rounded-2xl border-4 border-accent p-4"
         >
           <RiTailwindCssFill className="text-7xl p-2 text-sky-400" />
         </motion.div>

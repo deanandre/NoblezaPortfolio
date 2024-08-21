@@ -4,20 +4,20 @@ import AnimatedBackground from "./animated-background";
 
 const About = () => {
   return (
-    <div className="pb-4">
+    <div className="pb-36 max-[640px]:pb-0">
       <motion.h1
-        whileInView={{ opacity: 1, x: 0 }}
-        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -200 }}
         transition={{ duration: 1.5 }}
         className="mt-10 text-center text-4xl max-[640px]:text-2xl"
       >
         About <span className="text-accent"> Me</span>
       </motion.h1>
       <motion.div
-        whileInView={{ opacity: 1, x: 0 }}
-        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -200 }}
         transition={{ duration: 1.5 }}
-        className="grid grid-cols-1 p-10 md:grid-cols-3"
+        className="grid grid-cols-1 p-10 lg:grid-cols-3"
       >
         <AnimatedBackground
           className="rounded-lg bg-gray-800"
