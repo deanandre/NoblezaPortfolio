@@ -13,10 +13,10 @@ const container = (delay) => ({
 
 const Hero = () => {
   return (
-    <div className="pb-40 lg:mb-35 max-[640px]:pb-0">
+    <div className="w-full sm:px-0 lg:px-10 md:pb-40 md:mb-35 sm:pb-0">
       <div className="flex flex-wrap items-center max-[1030px]:flex-col-reverse border-b border-neutral-500 pb-20">
         {/* Hero Contents */}
-        <div className="w-full lg:w-1/2">
+        <div className="w-1/2">
           <div className="flex flex-col items-center lg:items-start">
             <motion.h1
               variants={container(0)}
@@ -30,7 +30,7 @@ const Hero = () => {
               variants={container(0.5)}
               initial="hidden"
               animate="visible"
-              className=" font-bold text-4xl tracking-tight xl:text-8xl max-[1030px]:text-center"
+              className=" font-bold text-4xl tracking-tight xl:text-7xl max-[1030px]:text-center"
             >
               Hello I'm <br />
               <span className="text-accent"> Dean Nobleza</span>
@@ -39,7 +39,7 @@ const Hero = () => {
               variants={container(1)}
               initial="hidden"
               animate="visible"
-              className="my-2 max-w-xl py-6 font-light tracking-widest max-[1030px]:text-center max-[640px]:text-xs max-[640px]:py-2"
+              className="my-2 max-w-xl py-6 font-light tracking-widest max-[1030px]:text-center sm:text-xs md:text-sm lg:text-base max-[640px]:py-2"
             >
               {HERO_CONTENT}
             </motion.p>
@@ -58,7 +58,7 @@ const Hero = () => {
         </div>
 
         {/* Profile Picture */}
-        <div className="flex w-full justify-center lg:w-1/2">
+        <div className="flex justify-center w-1/2">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{

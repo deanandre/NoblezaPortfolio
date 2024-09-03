@@ -11,12 +11,14 @@ import {
 } from "./tooltip";
 import ProjectSliderButtons from "./ProjectSliderButtons";
 import envisionProject from "../assets/envision.png";
+import docProject from "../assets/discoverOC.png";
 
 const projects = [
   {
     num: "01",
     title: "Architectural Blog Website",
-    description: "This is our prelim project on our Web Technologies subject",
+    description:
+      "An Architectural Blog Website which is our prelim project for Web Technologies to exercise what we have learned for vanilla coding.",
     stack: [{ name: "HTML 5" }, { name: "CSS 3" }, { name: "JavaScript" }],
     image: envisionProject,
     live: "https://deanandre.github.io/envision-estetech/",
@@ -24,12 +26,17 @@ const projects = [
   },
   {
     num: "02",
-    title: "project 2",
+    title: "Discover Orange County",
     description:
-      "LoreradaSdasdvfasdyuafsvduygvasudyvasuydigv asd asuhsav dsauid vasuidv asui",
-    stack: [{ name: "HTML 5" }, { name: "CSS 3" }, { name: "JavaScript" }],
-    image: envisionProject,
-    live: "",
+      "A travel blog website my team and I designed and implemented with the use of Elementor page builder in WordPress for a part-time job",
+    stack: [
+      { name: "WordPress" },
+      { name: "Elementor" },
+      { name: "Figma" },
+      { name: "SEO" },
+    ],
+    image: docProject,
+    live: "https://discoverorangecounty.net/",
     github: "",
   },
   {
@@ -77,7 +84,7 @@ const Projects = () => {
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: -100 }}
             transition={{ duration: 1.5 }}
-            className="w-full p-10 xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none"
+            className="w-full px-10 xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none"
           >
             <div className="flex flex-col gap-[30px] h-[50%]">
               {/* outline-num */}
@@ -109,7 +116,7 @@ const Projects = () => {
               {/* buttons */}
               <div className="flex items-center gap-4">
                 {/* live project button */}
-                <a href={project.github}>
+                <a href={project.live}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -122,7 +129,7 @@ const Projects = () => {
                   </TooltipProvider>
                 </a>
                 {/* github project button */}
-                <a href={project.live}>
+                <a href={project.project}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -146,12 +153,12 @@ const Projects = () => {
             <Swiper
               spaceBetween={30}
               slidesPerView={1}
-              className="xl:h-[520px] mb-12"
+              className="xl:h-[570px] mb-12"
               onSlideChange={handleSlideChange}
             >
               {projects.map((project, index) => (
                 <SwiperSlide key={index} className="w-full">
-                  <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                  <div className="h-[520px] relative group flex justify-center items-center bg-pink-50/20">
                     {/* overlay */}
                     <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                     {/* image */}
