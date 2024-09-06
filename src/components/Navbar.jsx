@@ -7,11 +7,11 @@ const Navbar = () => {
   return (
     <nav className="mb-20 flex items-center justify-between py-6 max-[640px]:mb-0">
       <div className="flex flex-shrink-0 items-center">
-        <h1 className="font-semibold text-2xl max-[640px]:text-xl">
+        <h1 className="font-semibold text-3xl max-[640px]:text-xl">
           Dean.<span className="text-accent">dev</span>
         </h1>
       </div>
-      <div className="m-8 flex items-center justify-center gap-4 text-2xl max-[640px]:text-xl">
+      <div className="my-8 flex items-center justify-center gap-4 text-2xl max-[640px]:text-xl">
         <a
           href="https://www.linkedin.com/in/dean-andre-nobleza-25a682180/"
           target="_blank"

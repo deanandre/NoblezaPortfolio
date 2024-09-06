@@ -68,14 +68,14 @@ const Projects = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
+      className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0 max-[640px]:py-0"
     >
       <div className="container mx-auto">
         <motion.h1
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -100 }}
           transition={{ duration: 1.5 }}
-          className="mb-20 text-center text-4xl max-[640px]:mb-10"
+          className="font-medium mb-20 text-center text-4xl max-[640px]:mb-10 mt-10 max-[640px]:text-2xl max-[640px]:font-normal"
         >
           Projects
         </motion.h1>
@@ -84,19 +84,19 @@ const Projects = () => {
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: -100 }}
             transition={{ duration: 1.5 }}
-            className="w-full px-10 xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none"
+            className="w-full px-10 xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none max-[640px]:px-3"
           >
             <div className="flex flex-col gap-[30px] h-[50%]">
               {/* outline-num */}
-              <div className="text-3xl lg:text-8xl leading-none font-extrabold text-outline">
+              <div className="text-3xl lg:text-8xl font-extrabold">
                 {[project.num]}
               </div>
               {/* project Category */}
-              <h2 className="text-2xl lg:text-5xl font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
+              <h2 className="text-2xl lg:text-5xl font-bold leading-none group-hover:text-accent transition-all duration-500 capitalize">
                 {project.title}
               </h2>
               {/* project Description */}
-              <p className="text-white/60 text-justify text-base sm:text-lg md:text-xl">
+              <p className=" text-justify text-base sm:text-lg md:text-xl">
                 {project.description}
               </p>
               {/* stack */}
@@ -112,15 +112,15 @@ const Projects = () => {
                 })}
               </ul>
               {/* border */}
-              <div className="border border-white/20"></div>
+              <div className="border border-gray-400"></div>
               {/* buttons */}
               <div className="flex items-center gap-4">
                 {/* live project button */}
                 <a href={project.live}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsArrowUpRight className="text-white text-3xl group-hover:text-ascent" />
+                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-black flex justify-center items-center group max-[640px]:w-[50px] max-[640px]:h-[50px]">
+                        <BsArrowUpRight className="text-3xl group-hover:text-accent text-white max-[640px]:text-lg" />
                       </TooltipTrigger>
                       <TooltipContent>
                         <p>Live Project</p>
@@ -132,8 +132,8 @@ const Projects = () => {
                 <a href={project.project}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsGithub className="text-white text-3xl group-hover:text-ascent" />
+                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-black flex justify-center items-center group max-[640px]:w-[50px] max-[640px]:h-[50px]">
+                        <BsGithub className="text-3xl group-hover:text-accent text-white max-[640px]:text-lg" />
                       </TooltipTrigger>
                       <TooltipContent>
                         <p>Github Repository</p>
@@ -158,7 +158,7 @@ const Projects = () => {
             >
               {projects.map((project, index) => (
                 <SwiperSlide key={index} className="w-full">
-                  <div className="h-[520px] relative group flex justify-center items-center bg-pink-50/20">
+                  <div className="h-[520px] max-[640px]:h-[220px] relative group flex justify-center items-center bg-pink-50/20">
                     {/* overlay */}
                     <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                     {/* image */}
@@ -175,7 +175,7 @@ const Projects = () => {
               {/* slider buttons */}
               <ProjectSliderButtons
                 containerStyles="flex gap-2 absolute right-0 xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
-                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+                btnStyles="bg-accent hover:bg-accent-hover text-white text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
               />
             </Swiper>
           </motion.div>
