@@ -1,5 +1,7 @@
 import { HERO_CONTENT } from "../constants";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import ContactFormPopup from "./ContactFormPopup";
 
 const container = (delay) => ({
   hidden: { x: -100, opacity: 0 },
@@ -11,6 +13,12 @@ const container = (delay) => ({
 });
 
 const Hero = () => {
+  const [isContactFormOpen, setContactFormOpen] = useState(false);
+
+  const togglePopup = () => {
+    setContactFormOpen(!isContactFormOpen);
+  };
+
   return (
     <div className="w-full sm:px-0 lg:px-10 md:pb-48 md:mb-35 sm:pb-0">
       <div className="flex flex-wrap items-center max-[1030px]:flex-col-reverse">
@@ -44,26 +52,24 @@ const Hero = () => {
             </motion.p>
 
             <div className="">
-              <motion.a
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
+              <motion.button
                 variants={container(1)}
                 initial="hidden"
                 animate="visible"
-                className="bg-accent mr-5 text-white text-lg font-medium rounded-full py-2 px-8 transition-colors duration-300 max-[640px]:px-6 max-[640px]:text-sm max-[640px]:mr-2"
+                className="bg-accent mr-5 border-2 text-white text-lg font-medium rounded-full py-2 px-8 transition-colors duration-300 hover:bg-white hover:border-accent hover:text-accent max-[640px]:px-6 max-[640px]:text-sm max-[640px]:mr-1"
+                onClick={togglePopup}
               >
                 Contact Me
-              </motion.a>
+              </motion.button>
 
               <motion.a
-                href=""
+                href="https://drive.google.com/file/d/12Tgp-juI-fJdkBusAXU2wH5TPVAwSxDX/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 variants={container(1)}
                 initial="hidden"
                 animate="visible"
-                className=" bg-black text-white text-lg rounded-full py-2 px-8 transition-colors duration-300  max-[640px]:px-6 max-[640px]:text-sm"
+                className=" bg-black border-2 text-white text-lg rounded-full py-2.5 px-8 transition-colors duration-300 hover:bg-white hover:border-black hover:text-black max-[640px]:px-6 max-[640px]:text-sm"
               >
                 View Resume
               </motion.a>
@@ -102,6 +108,7 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
+      {isContactFormOpen && <ContactFormPopup closePopup={togglePopup} />}
     </div>
   );
 };
