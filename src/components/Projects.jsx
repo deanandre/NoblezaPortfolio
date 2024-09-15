@@ -10,55 +10,16 @@ import {
   TooltipTrigger,
 } from "./tooltip";
 import ProjectSliderButtons from "./ProjectSliderButtons";
-import envisionProject from "../assets/envision.png";
-import docProject from "../assets/discoverOC.png";
-
-const projects = [
-  {
-    num: "01",
-    title: "Architectural Blog Website",
-    description:
-      "An Architectural Blog Website which is our prelim project for Web Technologies to exercise what we have learned for vanilla coding.",
-    stack: [{ name: "HTML 5" }, { name: "CSS 3" }, { name: "JavaScript" }],
-    image: envisionProject,
-    live: "https://deanandre.github.io/envision-estetech/",
-    github: "https://github.com/deanandre/envision-estetech",
-  },
-  {
-    num: "02",
-    title: "Discover Orange County",
-    description:
-      "A travel blog website my team and I designed and implemented with the use of Elementor page builder in WordPress for a part-time job",
-    stack: [
-      { name: "WordPress" },
-      { name: "Elementor" },
-      { name: "Figma" },
-      { name: "SEO" },
-    ],
-    image: docProject,
-    live: "https://discoverorangecounty.net/",
-    github: "",
-  },
-  {
-    num: "03",
-    title: "project 3",
-    description:
-      "LoreradaSdasdvfasdyuafsvduygvasudyvasuydigv asd asuhsav dsauid vasuidv asui",
-    stack: [{ name: "HTML 5" }, { name: "CSS 3" }, { name: "JavaScript" }],
-    image: envisionProject,
-    live: "",
-    github: "",
-  },
-];
+import { PROJECTS } from "../constants";
 
 const Projects = () => {
-  const [project, setProject] = useState(projects[0]);
+  const [project, setProject] = useState(PROJECTS[0]);
 
   const handleSlideChange = (swiper) => {
     // get current slide index
     const currentIndex = swiper.activeIndex;
 
-    setProject(projects[currentIndex]);
+    setProject(PROJECTS[currentIndex]);
   };
 
   return (
@@ -116,31 +77,44 @@ const Projects = () => {
               {/* buttons */}
               <div className="flex items-center gap-4">
                 {/* live project button */}
-                <a href={project.live}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-black flex justify-center items-center group max-[640px]:w-[50px] max-[640px]:h-[50px]">
-                        <BsArrowUpRight className="text-3xl group-hover:text-accent text-white max-[640px]:text-lg" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Live Project</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </a>
+                {project.live && (
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-black flex justify-center items-center group max-[640px]:w-[50px] max-[640px]:h-[50px]">
+                          <BsArrowUpRight className="text-3xl group-hover:text-accent text-white max-[640px]:text-lg" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>Live Project</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </a>
+                )}
+
                 {/* github project button */}
-                <a href={project.project}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-black flex justify-center items-center group max-[640px]:w-[50px] max-[640px]:h-[50px]">
-                        <BsGithub className="text-3xl group-hover:text-accent text-white max-[640px]:text-lg" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Github Repository</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </a>
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-black flex justify-center items-center group max-[640px]:w-[50px] max-[640px]:h-[50px]">
+                          <BsGithub className="text-3xl group-hover:text-accent text-white max-[640px]:text-lg" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>Github Repository</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </a>
+                )}
               </div>
             </div>
           </motion.div>
@@ -156,7 +130,7 @@ const Projects = () => {
               className="xl:h-[570px] mb-12"
               onSlideChange={handleSlideChange}
             >
-              {projects.map((project, index) => (
+              {PROJECTS.map((project, index) => (
                 <SwiperSlide key={index} className="w-full">
                   <div className="h-[520px] max-[640px]:h-[220px] relative group flex justify-center items-center bg-pink-50/20">
                     {/* overlay */}
