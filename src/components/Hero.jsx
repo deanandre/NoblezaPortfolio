@@ -63,7 +63,7 @@ const Hero = () => {
               </motion.button>
 
               <motion.a
-                href="https://drive.google.com/file/d/12Tgp-juI-fJdkBusAXU2wH5TPVAwSxDX/view?usp=sharing"
+                href="https://drive.google.com/file/d/1I0DWgf-MGakgUObRL-BZHfYbkUoM97HW/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 variants={container(1)}
