@@ -7,7 +7,7 @@ const About = () => {
     <div className="pb-36 max-[640px]:pb-0">
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -200 }}
+        initial={{ opacity: 0, y: -60 }}
         transition={{ duration: 1.5 }}
         className="font-medium mt-10 text-center text-4xl max-[640px]:text-2xl max-[640px]:font-normal"
       >

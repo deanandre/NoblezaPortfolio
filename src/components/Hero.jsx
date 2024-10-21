@@ -51,25 +51,25 @@ const Hero = () => {
               {HERO_CONTENT}
             </motion.p>
 
-            <div className="">
+            <div className="whitespace-nowrap">
               <motion.button
                 variants={container(1)}
                 initial="hidden"
                 animate="visible"
-                className="bg-accent mr-5 border-2 text-white text-lg font-medium rounded-full py-2 px-8 transition-colors duration-300 hover:bg-white hover:border-accent hover:text-accent max-[640px]:px-6 max-[640px]:text-sm max-[640px]:mr-1"
+                className="bg-accent hover:bg-hAccent mr-5 text-white text-xs sm:text-lg font-medium rounded-full py-2 px-8 duration-300  max-[640px]:px-6 max-[640px]:mr-2 whitespace-nowrap"
                 onClick={togglePopup}
               >
                 Contact Me
               </motion.button>
 
               <motion.a
-                href="https://drive.google.com/file/d/1I0DWgf-MGakgUObRL-BZHfYbkUoM97HW/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
                 variants={container(1)}
                 initial="hidden"
                 animate="visible"
-                className=" bg-black border-2 text-white text-lg rounded-full py-2.5 px-8 transition-colors duration-300 hover:bg-white hover:border-black hover:text-black max-[640px]:px-6 max-[640px]:text-sm"
+                href="https://drive.google.com/file/d/1I0DWgf-MGakgUObRL-BZHfYbkUoM97HW/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" bg-black hover:bg-gray-800 text-white text-xs sm:text-lg rounded-full py-2.5 px-8 duration-300  max-[640px]:px-6 whitespace-nowrap"
               >
                 View Resume
               </motion.a>

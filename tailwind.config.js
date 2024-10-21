@@ -9,6 +9,7 @@ export default {
       colors: {
         primary: "#1c1c22",
         accent: "#00e187",
+        hAccent: "#33e8a0"
       }
     },
   },
